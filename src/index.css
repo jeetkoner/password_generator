@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* range stylle */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 15px;
+    background: #FFFEF8;
+    border-radius: 16px;
+}
+
+input[type="range"]::-moz-range-track {
+    height: 15px;
+    background: #FFFEF8;
+    border-radius: 16px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #778DA9;
+    box-shadow: -407px 0 0 400px #778DA9;
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #778DA9;
+    box-shadow: -407px 0 0 400px #778DA9;
+}
+
+
+
+
+
+/*  for checkboxes toggle style  */
+
+.checkbox-wrapper-49 input[type="checkbox"] {
+    display: none;
+    visibility: hidden;
+}
+
+.checkbox-wrapper-49 {
+    --size: 50px;
+}
+
+.checkbox-wrapper-49 .block {
+    position: relative;
+    clear: both;
+    float: left;
+}
+
+.checkbox-wrapper-49 label {
+    width: var(--size);
+    height: calc(var(--size) / 2);
+    box-sizing: border-box;
+    border: 3px solid #778DA9;
+    float: left;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: .3s ease;
+    color: black;
+}
+
+.checkbox-wrapper-49 input[type=checkbox]:checked + label {
+    background: #778DA9;
+}
+
+.checkbox-wrapper-49 input[type=checkbox]:checked + label:before {
+    left: calc(var(--size) / 2);
+}
+
+.checkbox-wrapper-49 label:before {
+    transition: .3s ease;
+    content: '';
+    width: calc((var(--size) / 2) - 10px);
+    height: calc((var(--size) / 2) - 10px);
+    position: absolute;
+    background: white;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    color: black;
+    border-radius: 100px;
+}
